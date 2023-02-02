@@ -1,4 +1,75 @@
 .Hero {
   width: 100%;
   height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.Hero::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: hsl(24deg, 43%, 36%);
+  right: 0%;
+  top: 0;
+  border-radius: 50px;
+  filter: blur(5px);
+  transform: rotateZ(30deg) translatex(250px);
+  z-index: 0;
+}
+.Hero .welcome {
+  z-index: 2;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.Hero .welcome h2 {
+  margin: 0;
+}
+.Hero .welcome h2 span {
+  float: right;
+}
+.Hero .titles {
+  z-index: 2;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.Hero .titles ul {
+  display: flex;
+  list-style: none;
+}
+.Hero .titles ul li {
+  padding: 0 16px;
+}
+.Hero .titles p {
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+.Hero .titles p a {
+  padding: 15px;
+  border-radius: 20px;
+  color: var(--bgcolor);
+  background-color: var(--txtcolor);
+}
+.Hero .Floaty {
+  width: 60%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 20px 32px 0 hsla(24deg, 43%, 56%, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: 0 0 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 3;
 }/*# sourceMappingURL=hero.css.map */
