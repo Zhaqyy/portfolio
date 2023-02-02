@@ -1,5 +1,6 @@
 import { React } from "react";
 import "./hero.css";
+import logo from "../img/logo.png";
 
 function Hero() {
   return (
@@ -21,7 +22,6 @@ function Hero() {
       <div className="Floaty">
       <p><a href="#about">About</a></p>
       <span>
-
       </span>
       <p><a href="#exp">Experience</a></p>
       </div>

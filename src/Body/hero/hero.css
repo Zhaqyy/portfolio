@@ -21,6 +21,19 @@
   transform: rotateZ(30deg) translatex(250px);
   z-index: 0;
 }
+.Hero::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: hsl(24deg, 43%, 36%);
+  top: 0;
+  left: 0%;
+  border-radius: 50px;
+  filter: blur(5px);
+  transform: rotateZ(-30deg) translatex(-250px);
+  z-index: 0;
+}
 .Hero .welcome {
   z-index: 2;
   -webkit-backdrop-filter: blur(5px);
@@ -40,9 +53,29 @@
 .Hero .titles ul {
   display: flex;
   list-style: none;
+  margin: 5vh 0;
 }
 .Hero .titles ul li {
   padding: 0 16px;
+  position: relative;
+}
+.Hero .titles ul li::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  -webkit-clip-path: ellipse(20% 50% at 50% 50%);
+          clip-path: ellipse(20% 50% at 50% 50%);
+  z-index: -1;
+  transform: translate(-15px, -15px);
+  background-color: hsl(24deg, 43%, 25%);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+.Hero .titles ul li:hover::before {
+  opacity: 1;
+  -webkit-clip-path: ellipse(50% 30% at 50% 50%);
+          clip-path: ellipse(50% 30% at 50% 50%);
 }
 .Hero .titles p {
   text-align: center;
@@ -55,6 +88,10 @@
   border-radius: 20px;
   color: var(--bgcolor);
   background-color: var(--txtcolor);
+}
+.Hero .titles p a:hover {
+  transform: translateY(10px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
 }
 .Hero .Floaty {
   width: 60%;
@@ -72,4 +109,31 @@
   border-radius: 0 0 10px 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 3;
+  transition: all 2s ease;
+}
+.Hero .Floaty:hover {
+  background: rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0px 0px 3px hsla(24deg, 43%, 56%, 0.83));
+  box-shadow: 0px 20px 32px 0 hsla(24deg, 43%, 56%, 0.7);
+}
+.Hero .Floaty .logo {
+  max-height: 50px;
+}
+.Hero .Floaty p::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  -webkit-clip-path: ellipse(20% 50% at 50% 50%);
+          clip-path: ellipse(20% 50% at 50% 50%);
+  z-index: -1;
+  transform: translate(-5px, -15px);
+  background-color: hsl(24deg, 43%, 25%);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+.Hero .Floaty p:hover::before {
+  opacity: 1;
+  -webkit-clip-path: ellipse(50% 30% at 50% 50%);
+          clip-path: ellipse(50% 30% at 50% 50%);
 }/*# sourceMappingURL=hero.css.map */
