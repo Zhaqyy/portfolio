@@ -21,6 +21,7 @@
         transform: rotateZ(30deg) translatex(250px);
         z-index: 0;
     }
+
     &::after {
         content: '';
         width: 50%;
@@ -62,7 +63,7 @@
             li {
                 padding: 0 16px;
                 position: relative;
-               
+
 
                 &::before {
                     content: '';
@@ -71,7 +72,7 @@
                     height: 50px;
                     clip-path: ellipse(20% 50% at 50% 50%);
                     z-index: -1;
-                    transform: translate(-15px ,-15px);
+                    transform: translate(-15px, -15px);
                     background-color: hsl(24deg 43% 25%);
                     transition: all 0.5s ease-in-out;
                     opacity: 0;
@@ -96,8 +97,8 @@
                 color: var(--bgcolor);
                 background-color: var(--txtcolor);
 
-                &:hover{
-                    -webkit-transform: translateY(10px) ;
+                &:hover {
+                    -webkit-transform: translateY(10px);
                     -moz-transform: translateY(10px);
                     transform: translateY(10px);
                     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
@@ -125,7 +126,7 @@
         z-index: 3;
         transition: all 2s ease;
 
-        &:hover{
+        &:hover {
             background: rgba(0, 0, 0, 0.3);
             filter: drop-shadow(0px 0px 3px hsl(24deg 43% 56% / 83%));
             box-shadow: 0px 20px 32px 0 hsl(24deg 43% 56% / 70%);
@@ -134,8 +135,9 @@
         .logo {
             max-height: 50px;
         }
-        p{
-          
+
+        p {
+
             &::before {
                 content: '';
                 position: absolute;
@@ -143,7 +145,7 @@
                 height: 50px;
                 clip-path: ellipse(20% 50% at 50% 50%);
                 z-index: -1;
-                transform: translate(-5px ,-15px);
+                transform: translate(-5px, -15px);
                 background-color: hsl(24deg 43% 25%);
                 transition: all 0.5s ease-in-out;
                 opacity: 0;
@@ -153,7 +155,7 @@
                 opacity: 1;
                 clip-path: ellipse(50% 30% at 50% 50%);
             }
-            
+
         }
     }
 }
