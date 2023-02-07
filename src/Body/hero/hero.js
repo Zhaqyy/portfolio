@@ -1,10 +1,10 @@
 import { React } from "react";
 import "./hero.css";
-import logo from "../img/logo.png";
+// import logo from "../img/logo.png";
 
 function Hero() {
   return (
-    <section className="Hero">
+    <section className="Hero" id='hero'>
       <div className="welcome">
         <h2>WELCOME !</h2>
         <h1>Shuaib Abdulrazaq</h1>

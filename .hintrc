@@ -8,7 +8,8 @@
       {
         "ignore": [
           "text-size-adjust",
-          "backdrop-filter"
+          "backdrop-filter",
+          "overflow-x: clip"
         ]
       }
     ]

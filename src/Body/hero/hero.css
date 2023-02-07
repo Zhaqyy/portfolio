@@ -1,4 +1,4 @@
-.Hero {
+#hero {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -6,9 +6,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: clip;
 }
-.Hero::before {
+#hero::before {
   content: "";
   width: 50%;
   height: 100%;
@@ -21,7 +21,7 @@
   transform: rotateZ(30deg) translatex(250px);
   z-index: 0;
 }
-.Hero::after {
+#hero::after {
   content: "";
   width: 50%;
   height: 100%;
@@ -34,32 +34,32 @@
   transform: rotateZ(-30deg) translatex(-250px);
   z-index: 0;
 }
-.Hero .welcome {
+#hero .welcome {
   z-index: 2;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
-.Hero .welcome h2 {
+#hero .welcome h2 {
   margin: 0;
 }
-.Hero .welcome h2 span {
+#hero .welcome h2 span {
   float: right;
 }
-.Hero .titles {
+#hero .titles {
   z-index: 2;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
-.Hero .titles ul {
+#hero .titles ul {
   display: flex;
   list-style: none;
   margin: 5vh 0;
 }
-.Hero .titles ul li {
+#hero .titles ul li {
   padding: 0 16px;
   position: relative;
 }
-.Hero .titles ul li::before {
+#hero .titles ul li::before {
   content: "";
   position: absolute;
   width: 50px;
@@ -72,29 +72,29 @@
   transition: all 0.5s ease-in-out;
   opacity: 0;
 }
-.Hero .titles ul li:hover::before {
+#hero .titles ul li:hover::before {
   opacity: 1;
   -webkit-clip-path: ellipse(50% 30% at 50% 50%);
           clip-path: ellipse(50% 30% at 50% 50%);
 }
-.Hero .titles p {
+#hero .titles p {
   text-align: center;
   padding: 15px;
   margin: 10px;
   box-sizing: border-box;
 }
-.Hero .titles p a {
+#hero .titles p a {
   padding: 15px;
   border-radius: 20px;
   color: var(--bgcolor);
   background-color: var(--txtcolor);
   transition: all 1s ease;
 }
-.Hero .titles p a:hover {
+#hero .titles p a:hover {
   transform: translateY(10px);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
 }
-.Hero .Floaty {
+#hero .Floaty {
   width: 60%;
   height: auto;
   position: absolute;
@@ -112,15 +112,15 @@
   z-index: 3;
   transition: all 2s ease;
 }
-.Hero .Floaty:hover {
+#hero .Floaty:hover {
   background: rgba(0, 0, 0, 0.3);
   filter: drop-shadow(0px 0px 3px hsla(24deg, 43%, 56%, 0.83));
   box-shadow: 0px 20px 32px 0 hsla(24deg, 43%, 56%, 0.7);
 }
-.Hero .Floaty .logo {
+#hero .Floaty .logo {
   max-height: 50px;
 }
-.Hero .Floaty p::before {
+#hero .Floaty p::before {
   content: "";
   position: absolute;
   width: 50px;
@@ -133,7 +133,7 @@
   transition: all 0.5s ease-in-out;
   opacity: 0;
 }
-.Hero .Floaty p:hover::before {
+#hero .Floaty p:hover::before {
   opacity: 1;
   -webkit-clip-path: ellipse(50% 30% at 50% 50%);
           clip-path: ellipse(50% 30% at 50% 50%);
